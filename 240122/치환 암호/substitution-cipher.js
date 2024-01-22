@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const [cryptoString, cryptoRule] = fs.readFileSync(0).toString().trim().split('\n');
+const [cryptoString, cryptoRule] = fs.readFileSync(0).toString().split('\n');
 
 const originalAlphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 const cryptoRules = cryptoRule.split('').reduce((cryptoObj, crypto, index) => {
