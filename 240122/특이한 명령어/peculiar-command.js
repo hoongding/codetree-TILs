@@ -16,7 +16,7 @@ const calculateCommand = (commandArr) => {
         return Number(commandArr[0]) * Number(commandArr[1]);
     }
     else {
-        return Math.round(Number(commandArr[0]) * Number(commandArr[1]) * 0.5 * 10) * 0.1;
+        return (Math.round(Number(commandArr[0]) * Number(commandArr[1]) * 0.5 * 10) * 0.1).toFixed(1);
     }
 }
 
