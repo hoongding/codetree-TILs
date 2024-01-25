@@ -15,10 +15,12 @@ const diceNum = {
     8: 0,
 }
 
+const diceNumKeys = Object.keys(diceNum);
+
 numbers.forEach((number) => {
     diceNum[number] += 1;
 })
 
-const diceNumKeys = Object.keys(diceNum);
+
 
 diceNumKeys.forEach((key) => console.log(`${key} - ${diceNum[key]}`));
