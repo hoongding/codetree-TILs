@@ -21,6 +21,4 @@ numbers.forEach((number) => {
     diceNum[number] += 1;
 })
 
-
-
 diceNumKeys.forEach((key) => console.log(`${key} - ${diceNum[key]}`));
