@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const inputs = fs.readFileSync(0).toString().trim().split('\n');
 
-const numbers = inputs.map((row) => row.split(' ').map((str) => Number(str)));
+const numbers = inputs.map((row) => row.trim().split(' ').map((str) => Number(str)));
 
 const findMean = (numberArr) => (numberArr.reduce((sum, num) => sum += num, 0) / 3).toFixed(1);
 
