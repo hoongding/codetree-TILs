@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const inputs = fs.readFileSync(0).toString().split('\n');
+const inputs = fs.readFileSync(0).toString().trim().split('\n');
 
 const numbers = inputs.map((row) => row.split(' ').map((str) => Number(str)));
 
