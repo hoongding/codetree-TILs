@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const [a, secondNumbers] = fs.readFileSync(0).toString().trim().split('\n');
-const [b, c, d, e] = secondNumbers.split(' ');
+const [b, c, d, e] = secondNumbers.trim().split(' ');
 
 console.log(a > b ? 1 : 0);
 console.log(a > c ? 1 : 0);
