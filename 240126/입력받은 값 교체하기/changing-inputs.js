@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-let [a, b] = fs.readFileSync(0).toString().split(' ');
+let [a, b] = fs.readFileSync(0).toString().trim().split(' ');
 
 [a, b] = [b, a];
 
