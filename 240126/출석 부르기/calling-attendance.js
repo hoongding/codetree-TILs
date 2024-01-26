@@ -8,4 +8,4 @@ const attendance = {
     3: 'Paul',
 }
 
-console.log(attendance[studentNumber]);
+console.log(attendance[studentNumber] ? attendance[studentNumber] : 'Vacancy');
