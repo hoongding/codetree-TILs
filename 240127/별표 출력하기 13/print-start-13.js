@@ -7,6 +7,7 @@ const fs = require('fs');
 const n = Number(fs.readFileSync(0).toString().trim());
 
 const upsideArr = [];
+let answer = '';
 
 const makeStars = (starNum) => {
     let tempLine = '';
@@ -17,7 +18,11 @@ const makeStars = (starNum) => {
 
 for (let i = n; i >= 1; i--) upsideArr.push(makeStars(i));
 
-const changedUpsideArr = [upsideArr[0], upsideArr[upsideArr.length - 1], upsideArr.slice(1, upsideArr.length - 1)];
-const downsideArr = [...changedUpsideArr].reverse();
+if(upsideArr.length !== 1){
+    const changedUpsideArr = [upsideArr[0], upsideArr[upsideArr.length - 1], upsideArr.slice(1, upsideArr.length - 1)];
+    const downsideArr = [...changedUpsideArr].reverse();
+    answer = (changedUpsideArr.join('\n') + '\n' + downsideArr.join('\n')).trim(); 
+}
+else answer = '*\n*';
 
-console.log((changedUpsideArr.join('\n') + '\n' + downsideArr.join('\n')).trim());
+console.log(answer);
