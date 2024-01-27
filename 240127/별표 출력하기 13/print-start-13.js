@@ -16,13 +16,9 @@ const makeStars = (starNum) => {
     return tempLine;
 }
 
-for (let i = n; i >= 1; i--) upsideArr.push(makeStars(i));
+for (let i = n; i >= 1; i--) {
+    if(i <= n / 2) upsideArr.splice(i, 0, makeStars(i));
+    else upsideArr.push(makeStars(i));
+};
 
-if(upsideArr.length !== 1){
-    const changedUpsideArr = [upsideArr[0], upsideArr[upsideArr.length - 1], upsideArr.slice(1, upsideArr.length - 1)];
-    const downsideArr = [...changedUpsideArr].reverse();
-    answer = (changedUpsideArr.join('\n') + '\n' + downsideArr.join('\n')).trim(); 
-}
-else answer = '*\n*';
-
-console.log(answer);
+console.log(upsideArr.join('\n') + '\n' + [...upsideArr].reverse().join('\n'));
