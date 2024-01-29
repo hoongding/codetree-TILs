@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const inputs = fs.readFileSync(0).toString().trim().split('\n');
+const inputs = fs.readFileSync(0).toString().trim().split('\n').map(str => str.trim());
 
 const [n, m] = inputs[0].split(' ').map(str => +str);
 const numbers = inputs.slice(1);
