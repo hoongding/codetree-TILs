@@ -6,7 +6,7 @@ const [n, m] = inputs[0].split(' ').map(str => +str);
 const numbers = inputs.slice(1);
 
 const squreA = numbers.slice(0, n).map((line) => line.split(' ').map(str => +str));
-const squreB = numbers.slice(n, n * 2).map((line) => line.split(' ').map(str => +str));
+const squreB = numbers.slice(n, numbers.length).map((line) => line.split(' ').map(str => +str));
 
 const newSquare = squreA.map((line, rowIndex) => line.map((number, colIndex) => {
     return number === squreB[rowIndex][colIndex] ? 0 : 1;
