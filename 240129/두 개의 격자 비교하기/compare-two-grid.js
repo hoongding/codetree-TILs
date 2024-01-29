@@ -12,4 +12,4 @@ const newSquare = squreA.map((line, rowIndex) => line.map((number, colIndex) => 
     return number === squreB[rowIndex][colIndex] ? 0 : 1;
 }))
 
-newSquare.forEach((line) => console.log(line.join(' ')));
+newSquare.forEach((line) => console.log(line.join(' ').trim()));
