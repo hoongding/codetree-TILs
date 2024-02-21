@@ -6,7 +6,7 @@ const shiftRight = (arr) => {
     return [...arr.slice(1), arr[0]].join('');
 }
 
-let n = 0;
+let n = -1;
 
 for(let i = 1; i <= string.length; i++){
     string = shiftRight(string.split(''));
