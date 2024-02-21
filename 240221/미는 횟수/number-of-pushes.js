@@ -3,7 +3,7 @@ const fs = require('fs');
 let [string, target] = fs.readFileSync(0).toString().trim().split('\n');
 
 const shiftRight = (arr) => {
-    return [...arr.slice(1), arr[0]].join('');
+    return [arr[arr.length - 1], ...arr.slice(0, arr.length - 1), ].join('');
 }
 
 let n = -1;
