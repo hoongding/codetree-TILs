@@ -8,7 +8,7 @@ const shiftRight = (arr) => {
 
 let n = -1;
 
-for(let i = 1; i < string.length; i++){
+for(let i = 1; i <= string.length; i++){
     string = shiftRight(string.split(''));
     if(string === target){
         n = i;
