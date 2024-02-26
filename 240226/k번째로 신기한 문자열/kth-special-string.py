@@ -8,7 +8,7 @@ word_arr = [
 sort_word_arr = []
 
 for word in word_arr:
-    if t in word:
+    if t == word[0:len(t)]:
         sort_word_arr.append(word)
 
 sort_word_arr.sort()
