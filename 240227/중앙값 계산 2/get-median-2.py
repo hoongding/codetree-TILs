@@ -3,4 +3,13 @@ n = int(input())
 
 arr = list(map(int, input().split()))
 
-print(arr)
+middle_val_arr = []
+for [index, num] in enumerate(arr):
+    if index % 2 == 0:
+        sort_arr = sorted(arr[:index + 1])
+        middle_val_arr.append(sort_arr[index // 2])
+
+middle_val_arr.sort()
+
+for num in middle_val_arr:
+    print(num, end = " ")
