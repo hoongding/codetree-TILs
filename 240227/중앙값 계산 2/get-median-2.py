@@ -7,9 +7,8 @@ middle_val_arr = []
 for [index, num] in enumerate(arr):
     if index % 2 == 0:
         sort_arr = sorted(arr[:index + 1])
+        # print(sort_arr)
         middle_val_arr.append(sort_arr[index // 2])
-
-middle_val_arr.sort()
 
 for num in middle_val_arr:
     print(num, end = " ")
