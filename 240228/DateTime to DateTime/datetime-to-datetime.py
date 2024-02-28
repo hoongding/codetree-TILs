@@ -1,6 +1,6 @@
 day, hour, minute = tuple(map(int, input().split()))
 
-if (day >= 11 and hour < 11) or (day >= 11 and hour >= 11 and minute < 11):
+if (day == 11 and hour < 11) or (day == 11 and hour == 11 and minute < 11):
     print(-1)
 
 cnt = 0
