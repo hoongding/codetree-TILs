@@ -1,14 +1,15 @@
 n = int(input())
+OFFSET = 100
 
 arr = [
     tuple(map(int, input().split()))
     for _ in range(n)
 ]
 
-answer = [0 for _ in range(len(arr))]
+answer = [0 for _ in range(202)]
 
 for start, end in arr:
-    for i in range(start - 1, end - 1):
+    for i in range(start - 1 + OFFSET, end - 1 + OFFSET):
         answer[i] += 1
 
-print(answer)
+print(max(answer))
