@@ -23,7 +23,9 @@ for col in range(OFFSET * 2 + 1):
         if coor[col][row] == 1:
             rest_area_x.append(row)
             rest_area_y.append(col)
-
-min_x, max_x = min(rest_area_x), max(rest_area_x)
-min_y, max_y = min(rest_area_y), max(rest_area_y)
-print((max_x - min_x) * (max_y - min_y))
+if len(rest_area_x) == 0:
+    print(0)
+else:
+    min_x, max_x = min(rest_area_x), max(rest_area_x)
+    min_y, max_y = min(rest_area_y), max(rest_area_y)
+    print((max_x - min_x) * (max_y - min_y))
