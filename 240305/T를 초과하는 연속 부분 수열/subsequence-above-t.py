@@ -8,7 +8,7 @@ for i in range(n):
     if i != 0 and nums[i] > t:
         cnt += 1
     elif i != 0 and nums[i] <= t:
-        cnt = 1
+        cnt = 0
     ans = max(cnt, ans)
 
 print(ans)
