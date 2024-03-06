@@ -28,7 +28,7 @@ for speed, time in b_move:
         b_trace.append(b_distance)
 
 
-lead = 0 if a_trace[i] > b_trace[i] else 1
+lead = 0 if a_trace[i] >= b_trace[i] else 1
 answer = 0
 for i in range(len(a_trace)):
     if a_trace[i] == b_trace[i]:
