@@ -31,14 +31,13 @@ for speed, time in b_move:
 lead = 0 if a_trace[i] >= b_trace[i] else 1
 answer = 0
 for i in range(len(a_trace)):
-    if a_trace[i] == b_trace[i]:
-        continue
-    else: 
-        temp_lead = 0 if a_trace[i] > b_trace[i] else 1
-    
-    if i != 0 and lead != temp_lead:
-        lead = temp_lead
-        
-        answer += 1
+    if a_trace[i] > b_trace[i]:
+        if lead == 1:
+            answer += 1
+        lead = 0
+    elif a_trace[i] < b_trace[i]:
+        if lead == 0:
+            answer += 1
+        lead = 1
 
 print(answer)
