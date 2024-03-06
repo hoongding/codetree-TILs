@@ -40,4 +40,7 @@ for i in range(1, len(a_trace)):
             answer += 1
         lead = 1
 
-print(answer)
+if answer == 0:
+    print(1)
+else:      
+    print(answer)
