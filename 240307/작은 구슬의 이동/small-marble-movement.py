@@ -9,7 +9,7 @@ directions = {
     'L': 3
 }
 # 1,0 0,1 0,-1 -1,0
-dxs, dys = [1, 0, 0, -1], [0, 1, -1, 0]
+dxs, dys = [1, 0, 0, -1], [0, -1, 1, 0]
 
 def is_range(row, col):
     return row >= 0 and col >= 0 and row < n and col < n
