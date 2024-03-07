@@ -19,7 +19,6 @@ for _ in range(t):
     nx, ny = col + dxs[cur_dir], row + dys[cur_dir]
     if not is_range(nx, ny):
         cur_dir = 3 - cur_dir
-        continue
     else:
         col = nx
         row = ny
