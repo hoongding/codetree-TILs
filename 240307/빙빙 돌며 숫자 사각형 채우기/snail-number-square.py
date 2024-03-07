@@ -1,4 +1,4 @@
-row, col = tuple(map(int, input().split()))
+col, row = tuple(map(int, input().split()))
 
 answer = [
     [0] * row
