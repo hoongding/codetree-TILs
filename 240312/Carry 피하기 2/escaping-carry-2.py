@@ -1,4 +1,3 @@
-import sys
 n = int(input())
 
 nums = [
@@ -8,7 +7,7 @@ nums = [
 
 def is_carry(n1, n2, n3):
     flag = False
-    while n1 > 1 and n2 > 1 and n3 > 1:
+    while n1 >= 1 or n2 >= 1 or n3 >= 1:
         n1_digit, n2_digit, n3_digit = n1 % 10, n2 % 10, n3 % 10
         if n1_digit + n2_digit + n3_digit >= 10:
             flag = True
