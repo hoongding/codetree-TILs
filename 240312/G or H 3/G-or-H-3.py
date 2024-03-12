@@ -3,26 +3,21 @@ n, k = list(map(int, input().split()))
 
 # 사진크기 k
 # G가 찍히면 각각 1점, H찍히면 각각 2점
-
+MAX_NUM = 10000
+arr = [0] * (MAX_NUM + 1)
 # 사람위치, 알파벳정보
-people = [
-    input().split()
-    for _ in range(n)
-]
+for _ in range(n):
+    x, c = tuple(input().split())
+    x = int(x)
+    
+    arr[x] = 1 if c == 'G' else 2
 
 max_size = -sys.maxsize
-MAX_NUM = 10000
-for i in range(MAX_NUM - k + 1):
 
+for i in range(MAX_NUM - k + 1):
     cur_score = 0
     for idx in range(k + 1):
-        for (position, alphabet) in people:
-            position = int(position)
-            if position == i + idx:
-                if alphabet == 'G':
-                    cur_score += 1
-                else:
-                    cur_score += 2
+        cur_score += arr[i + idx]
     max_size = max(max_size, cur_score)
     
 
