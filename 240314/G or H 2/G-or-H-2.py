@@ -10,7 +10,7 @@ positions = []
 for (position, _) in people:
     positions.append(int(position))
 
-positions.reverse()
+positions.sort()
 
 max_size = - sys.maxsize
 for i in range(len(positions)):
