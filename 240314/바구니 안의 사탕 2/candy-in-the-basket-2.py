@@ -11,7 +11,7 @@ baskets = [
 max_size = -sys.maxsize
 MAX_PLACE = 100
 
-for center in range(k + 1, MAX_PLACE):
+for center in range(1, MAX_PLACE):
     cur_start, cur_end = center - k, center + k
     cur_sum = 0
     for candies, coor in baskets:
