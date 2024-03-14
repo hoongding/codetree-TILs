@@ -1,6 +1,6 @@
 import sys
 # n개 바구니, 앞 뒤 k
-n, k = list(map(int, input().split()))
+n, k = tuple(map(int, input().split()))
 
 # 사탕개수, 바구니 좌표
 baskets = [
@@ -11,7 +11,7 @@ baskets = [
 max_size = -sys.maxsize
 MAX_PLACE = 100
 
-for center in range(k + 1, 100 - k + 1):
+for center in range(k + 1, MAX_PLACE):
     cur_start, cur_end = center - k, center + k
     cur_sum = 0
     for candies, coor in baskets:
