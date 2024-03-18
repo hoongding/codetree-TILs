@@ -16,7 +16,7 @@ def is_range(num, digit):
         temp_num = num + idx
         
         if temp_num <= 0:
-            temp_num = n + temp_num - 1
+            temp_num = n + temp_num
         if temp_num > n:
             temp_num = temp_num - n
         
