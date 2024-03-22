@@ -1,4 +1,7 @@
 # 안잠기는 곳이 필요!!!
+
+import sys
+sys.setrecursionlimit(2500)
 n, m = tuple(map(int, input().split()))
 
 
