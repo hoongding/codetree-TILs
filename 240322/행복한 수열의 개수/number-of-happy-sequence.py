@@ -28,7 +28,7 @@ for row in grid:
 for i in range(n):
     cur_item = grid[0][i]
     cnt = 1
-    for col in range(n):
+    for col in range(1, n):
         if grid[col][i] == cur_item:
             cnt += 1
         else:
