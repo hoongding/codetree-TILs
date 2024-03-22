@@ -41,6 +41,7 @@ def dfs(x, y):
 
 
 answer = []
+max_size = 0
 for i in range(n):
     for j in range(n):
         if not visited[i][j]:
@@ -50,7 +51,6 @@ for i in range(n):
             dfs(i, j)
             if order >= 4:
                 answer.append((grid[i][j], order))
+            max_size = max(max_size, order)
 
-answer.sort(lambda x: x[1])
-
-print(len(answer), answer[len(answer) - 1][1])
+print(len(answer), max_size)
