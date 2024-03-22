@@ -53,4 +53,4 @@ for i in range(n):
 
 answer.sort(lambda x: x[1])
 
-print(len(answer), answer[-1][1])
+print(len(answer), answer[len(answer) - 1][1])
