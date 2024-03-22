@@ -6,14 +6,14 @@ grid = [
 ]
 
 visited = [
-    [False for _ in range(n)]
-    for _ in range(m)
+    [False for _ in range(m)]
+    for _ in range(n)
 ]
 
 order = 1
 
 def is_range(x, y):
-    return x >= 0 and y >= 0 and x <= n - 1 and y <= m - 1
+    return x >= 0 and y >= 0 and x <= m - 1 and y <= n - 1
 
 def can_go(x, y):
     if not is_range(x, y):
