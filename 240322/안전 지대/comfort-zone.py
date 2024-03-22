@@ -58,4 +58,7 @@ for k in range(1, 101):
         min_k = k
 
 
-print(min_k, max_order)
+if max_order == 0:
+    print(1, 0)
+else:
+    print(min_k, max_order)
