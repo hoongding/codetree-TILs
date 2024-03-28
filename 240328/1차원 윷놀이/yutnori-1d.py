@@ -19,13 +19,17 @@ def choose_move(cur_point, cnt):
             cnt += 1
             max_cnt = max(max_cnt, cnt)
             return
-    
-    for idx, move in enumerate(moves):
-        if visited[idx]:
-            continue
-        visited[idx] = True
-        choose_move(cur_point + move, cnt)
-        visited[idx] = False
+    if False in visited:
+        for idx, move in enumerate(moves):
+            if visited[idx]:
+                continue
+            visited[idx] = True
+            choose_move(cur_point + move, cnt)
+            visited[idx] = False
+    else:
+        max_cnt = max(max_cnt, cnt)
+        return
+
 
 
 choose_move(1, 0)
