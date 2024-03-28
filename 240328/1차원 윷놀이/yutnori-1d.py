@@ -6,30 +6,33 @@ n, board_num, player_num = tuple(map(int, input().split()))
 
 # player 숫자만큼 board 만들어주기
 moves = list(map(int, input().split()))
-visited = [False for _ in range(n)]
+players = [1 for _ in range(player_num)]
 # 시작은 1부터 시작. board_num 까지 도착하면 끝.
 max_cnt = 0
-def choose_move(cur_point, cnt):
+
+def calc():
+    score = 0
+    for player in players:
+        score += (player >= board_num)
+
+    return score
+
+def choose_move(cnt):
     # 보드 크기보다 높으면
     global max_cnt
-    if cur_point >= board_num:
-        if False in visited:
-            choose_move(1, cnt + 1)
-        else:
-            max_cnt = max(max_cnt, cnt + 1)
-            return
-    if False in visited:
-        for idx, move in enumerate(moves):
-            if visited[idx]:
-                continue
-            visited[idx] = True
-            choose_move(cur_point + move, cnt)
-            visited[idx] = False
-    else:
-        max_cnt = max(max_cnt, cnt)
+
+    max_cnt = max(max_cnt, calc())
+    if cnt == n:
         return
+    
+    for i in range(player_num):
+        if players[i] >= board_num:
+            continue
+        
+        players[i] += moves[cnt]
+        choose_move(cnt + 1)
+        players[i] -= moves[cnt]
+        
 
-
-
-choose_move(1, 0)
+choose_move(0)
 print(max_cnt)
