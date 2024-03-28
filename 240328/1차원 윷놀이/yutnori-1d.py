@@ -16,8 +16,7 @@ def choose_move(cur_point, cnt):
         if False in visited:
             choose_move(1, cnt + 1)
         else:
-            cnt += 1
-            max_cnt = max(max_cnt, cnt)
+            max_cnt = max(max_cnt, cnt + 1)
             return
     if False in visited:
         for idx, move in enumerate(moves):
