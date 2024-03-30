@@ -15,20 +15,23 @@ def get_weights():
     for cur_grid, next_grid in answer:
         temp_sum += weights[cur_grid][next_grid]
 
+    temp_sum += weights[answer[-1][1]][0]
+    
     return temp_sum
 
 min_sum = sys.maxsize
 def choose(cur_num):
     global min_sum
     if len(answer) == n - 1:
-        answer.append((cur_num, 0))
         min_sum = min(min_sum, get_weights())
         return
     
     for i in range(1, n):
         if visited[i]:
             continue
-        
+        if weights[cur_num][i] == 0:
+            continue
+
         visited[i] = True
         answer.append((cur_num, i))
         choose(i)
