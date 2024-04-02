@@ -17,9 +17,6 @@ selected_pos = []
 coin_pos = []
 answer = MAX_SIZE
 
-
-
-
 # 3. 이동하는 거리 구하는 함수
 def dist(a, b):
     (ax, ay), (bx, by) = a, b
@@ -54,13 +51,15 @@ def find(cur_coin, coin_cnt):
     find(cur_coin + 1, coin_cnt + 1)
     selected_pos.pop()
 
+
 # 1. start, end position부터 잡아준다. -> O(n^2)
 for i in range(n):
     for j in range(n):
         if grid[i][j] == 'S':
             start_pos = (i, j)
-        if grid[i][j] == ' E':
+        if grid[i][j] == 'E':
             end_pos = (i, j)
+
 # 2. 동전 위치 찾기 1 ~ 9까지
 for num in range(1, 10):
     for i in range(n):
